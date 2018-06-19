@@ -1,0 +1,23 @@
+version: "3"
+services:
+   mycontacts:
+     build: .
+     restart: always
+     networks:
+       - contacts-net
+     volumes:
+       - ./plugin:/opt/karaf/plugin
+     tty: true
+   db:
+     image: mysql:5.7.22
+     restart: always
+     networks:
+       - contacts-net
+     environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: test
+     volumes:
+       - ./database:/docker-entrypoint-initdb.d
+     tty: true
+networks:
+   contacts-net:

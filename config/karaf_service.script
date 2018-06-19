@@ -1,0 +1,4 @@
+feature:repo-add mvn:org.ops4j.pax.jdbc/pax-jdbc-features/0.5.0/xml/features
+feature:install transaction jndi pax-jdbc-h2 pax-jdbc-config pax-jdbc-pool-dbcp2
+feature:install jpa jdbc hibernate
+logout
