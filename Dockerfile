@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
-ENV http_proxy "http://proxy.tma.com.vn:8080"
-ENV https_proxy "https://proxy.tma.com.vn:8080"
+#ENV http_proxy "http://proxy.tma.com.vn:8080"
+#ENV https_proxy "https://proxy.tma.com.vn:8080"
 RUN apt-get update
 
 # @Option
